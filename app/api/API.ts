@@ -14,12 +14,12 @@ export default class URLFactory {
     return this;
   }
 
-  getByImdbID(id) {
-    this.URL = `${this.URL}&i=${id}`;
+  getByImdbID(id, fullPlot = false) {
+    this.URL = `${this.URL}&i=${id}${fullPlot ? "&plot=full" : ""}`;
     return this;
   }
 
-  async fetchOneMovie() {
+  async getSingleMovie() {
     try {
       const response = await fetch(this.URL);
       if (response.ok) {

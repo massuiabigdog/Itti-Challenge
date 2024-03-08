@@ -11,7 +11,6 @@ const searchFilmByTitleAndYear = (title, year) => async (dispatch) => {
       payload: { films: Search, totalResults },
     });
   } catch (error) {
-    console.log(error.message); // Add console.log(
     dispatch({ type: "SEARCH_REJECTED", payload: error.message });
   }
 };

@@ -7,8 +7,6 @@ import useDebounce from "../hooks";
 
 
 function Home() {
-
-
   const [searchInput, setSearchInput] = useState({
     title: "",
     year: "",

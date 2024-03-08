@@ -7,7 +7,7 @@ export const colors = {
 
 export const createRateStars = (rate: number) => {
   let stars = [];
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 10; i++) {
     if (i < rate) {
       stars.push(
         <Ionicons key={i} name="star" size={20} color="#f59e0b" />
