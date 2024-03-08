@@ -2,6 +2,8 @@ import { registerRootComponent } from "expo";
 
 import { AppNavigation } from "./navigation";
 import { LogBox } from 'react-native';
+import { Provider as ReduxProvider } from "react-redux";
+import store from "./redux/store";
 
 import { NativeBaseProvider } from "native-base";
 
@@ -10,7 +12,9 @@ function App() {
 
   return (
     <NativeBaseProvider>
-      <AppNavigation />
+      <ReduxProvider store={store}>
+        <AppNavigation />
+      </ReduxProvider>
     </NativeBaseProvider>
   );
 }

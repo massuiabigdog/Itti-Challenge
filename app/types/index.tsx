@@ -10,3 +10,11 @@ export interface IMovie {
     }; 
     description: string;     
 }
+
+export interface IMovieShort {
+    Poster: string;
+    Title: string;
+    Type: string;
+    Year: string;
+    imdbID: string;
+}

@@ -1,3 +1,5 @@
 import MoviesList from "./MoviesList";
+import SearchBar from "./SearchBar";
+import MovieCard from "./MovieCard";
 
-export { MoviesList };
+export { MovieCard, SearchBar, MoviesList };
