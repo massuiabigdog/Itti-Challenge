@@ -8,6 +8,7 @@ const filmsReducer = (store = [], action) => {
         searchLoading: false,
         films: action.payload.films,
         totalResults: action.payload.totalResults,
+        searchError: null,
       };
     case "SEARCH_REJECTED":
       return { ...store, searchLoading: false, searchError: action.payload };

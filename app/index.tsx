@@ -8,7 +8,7 @@ import store from "./redux/store";
 import { NativeBaseProvider } from "native-base";
 
 function App() {
-  // LogBox.ignoreAllLogs();//Ignore all log notifications
+  LogBox.ignoreAllLogs();//Ignore all log notifications
 
   return (
     <NativeBaseProvider>

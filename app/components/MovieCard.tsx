@@ -1,7 +1,8 @@
 import { Box, HStack, Text, Image, VStack, Divider } from "native-base";
-import { IMovie, IMovieShort } from "../types";
 import { TouchableOpacity } from "react-native";
 import { useEffect, useState } from "react";
+
+import { IMovie, IMovieShort } from "../types";
 import URLFactory from "../api/API";
 import { createRateStars } from "../utils";
 import { navigate } from "../navigation/navigationService";

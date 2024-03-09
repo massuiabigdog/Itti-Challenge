@@ -1,34 +1,29 @@
 import React from "react";
 import { FlatList } from "react-native";
-import { Box, Text } from "native-base";
 
 import { IMovieShort } from "../types";
 import MovieCard from "./MovieCard";
 
 interface MoviesListProps {
-  providedList: IMovieShort[] | undefined;
+  providedList: IMovieShort[];
+  handleInfiteScrooll: () => void;
+  loading?: boolean;
 }
 
-const MoviesList = ({ providedList }: MoviesListProps) => {
+const MoviesList = ({ providedList, handleInfiteScrooll, loading }: MoviesListProps) => {
   return (
-    <>
-      {providedList?.length === 0 && (
-        <Box height="100%">
-          <Text textAlign="center" margin="auto">
-            No Movies Found
-          </Text>
-        </Box>
-      )}
       <FlatList
-      style={{marginTop: 20, marginBottom: 120}}
+        style={{ marginTop: 20, marginBottom: 100}}
         data={providedList}
-        renderItem={({ item }) => (
-          <MovieCard movie={item}/>
-        )}
+        renderItem={({ item }) => <MovieCard movie={item} />}
         keyExtractor={(item, index) => `${item.Title}_${index}`}
         onEndReachedThreshold={0.1}
+        onEndReached={({ distanceFromEnd }) => {
+          if (distanceFromEnd >= 20 && !loading) {
+            handleInfiteScrooll();
+          }
+        }}
       />
-    </>
   );
 };
 

@@ -8,9 +8,9 @@ export default class URLFactory {
     this.URL = `${OMDB_URL}?apikey=${API_KEY}`;
   }
 
-  searchByTitleAndYear(title, year) {
+  searchByTitleAndYear(title, year, page) {
     const parsedTitle = title.replace(/\s/g, "+");
-    this.URL = `${this.URL}&s=${parsedTitle}${year ? `&y=${year}` : ""}`;
+    this.URL = `${this.URL}&s=${parsedTitle}${year ? `&y=${year}` : ""}${page ? `&page=${page}` : ""}`;
     return this;
   }
 
