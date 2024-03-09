@@ -1,7 +1,7 @@
 # Movie App
 This is a React Native project developed to list movies and their details.
 
-## The challenge
+### The challenge
 - Use React or React Native (if using React Native, use CLI)
 - Preferably use TypeScript
 - Use the [OMDB API](http://www.omdbapi.com/) to fetch movie data
@@ -21,29 +21,27 @@ This is a React Native project developed to list movies and their details.
   - Any other relevant details
 - Use state management tools like Redux, Zustand, MobX, etc.
   
-## Technologies Used
+### Technologies Used
 - React/React Native
 - TypeScript
 - Redux
 - Native Base
 
-- #### How to start:
+- ### How to start:
 - Clone this repo
 - Jump to the project folder
 - Create a .env file from a .env.example. In root directory -> cp .env.example .env 
 - Install dependecies -> yarn install
 - Run - yarn ios / yarn android
 
-## Additional Notes
+### Additional Notes
 - Ensure that the OMDB API key is properly configured for API requests.
 - OMDB API key is inside .env.example you just need create a new .env file.
 
-#### Demo video
+### Demo video
 https://github.com/massuiabigdog/Itti-Challenge/assets/16282589/55613001-b7d5-447c-8f98-b4f00445428d
 
-
-
-#### Screens
+### Screens
 <p float="left">
   <img src="./screenshoots/screen-1.png" width="20%" />
   <img src="./screenshoots/screen-2.png" width="20%" />
