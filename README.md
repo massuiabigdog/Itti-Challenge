@@ -27,7 +27,7 @@ This is a React Native project developed to list movies and their details.
 - Redux
 - Native Base
 
-- ### How to start:
+### How to start:
 - Clone this repo
 - Jump to the project folder
 - Create a .env file from a .env.example. In root directory -> cp .env.example .env 
