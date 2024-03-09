@@ -7,10 +7,11 @@ import { IMovie } from "../types";
 import { createRateStars } from "../utils";
 import URLFactory from "../api/API";
 
-function MovieDetails({ route }) {
+function MovieDetails({ route, navigation }) {
   const { fullFilm }: { fullFilm: IMovie } = route.params;
   const [plot, setPlot] = useState<string>(fullFilm.Plot || '');
   useEffect(() => {
+    navigation.setOptions({ title: `Details of: ${fullFilm.Title.substring(0, 20)}${fullFilm.Title.length > 24 && '...'}` });
     const handleGetFullFilm = async () => {
       try {
         const fetchedFilm = await new URLFactory()
@@ -53,7 +54,7 @@ function MovieDetails({ route }) {
             <HStack mb={10} justifyContent="space-between">
               {fullFilm.Poster &&
                 <Image fallbackElement={<Box w='100%' h={10} ><Ionicons style={{ margin: 'auto', alignSelf: 'center' }} name="camera" size={20} color="#e7e5e4" /></Box>
-                } alt={fullFilm.Title} shadow='sm' size='2xl' m='auto' source={{
+                } alt={fullFilm.Title} shadow='sm' size='2xl' h={400} m='auto' source={{
                   uri: fullFilm?.Poster
                 }} />
               }

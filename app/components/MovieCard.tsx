@@ -9,7 +9,6 @@ import { navigate } from "../navigation/navigationService";
 const MovieCard = ({ movie }: { movie: IMovieShort }) => {
 
   const [fullFilm, setFullFilm] = useState<IMovie>({} as IMovie);
-
   useEffect(() => {
     const handleGetFullFilm = async () => {
       try {
@@ -27,7 +26,7 @@ const MovieCard = ({ movie }: { movie: IMovieShort }) => {
   const mainContent = <>
     <HStack justifyContent="space-between">
       {movie.Poster &&
-        <Image fallbackElement={<></>} alt={movie.Title} mr={4} shadow='sm' size='xl' bg="green.500" source={{
+        <Image fallbackElement={<></>} alt={movie.Title} mr={4} shadow='sm' size='xl' h='150' w='100' bg="green.500" source={{
           uri: movie?.Poster
         }} />
       }
