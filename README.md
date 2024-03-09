@@ -45,10 +45,10 @@ https://github.com/massuiabigdog/Itti-Challenge/assets/16282589/55613001-b7d5-44
 
 #### Screens
 <p float="left">
-  <img src="./screenshoots/screen-1.png" width="25%" />
-  <img src="./screenshoots/screen-2.png" width="25%" />
-  <img src="./screenshoots/screen-3.png" width="25%" />
-  <img src="./screenshoots/screen-4.png" width="25%" />
+  <img src="./screenshoots/screen-1.png" width="20%" />
+  <img src="./screenshoots/screen-2.png" width="20%" />
+  <img src="./screenshoots/screen-3.png" width="20%" />
+  <img src="./screenshoots/screen-4.png" width="20%" />
 </p>
 
 ### Let's work together! 
