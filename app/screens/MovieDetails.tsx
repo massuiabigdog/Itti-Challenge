@@ -11,7 +11,7 @@ function MovieDetails({ route, navigation }) {
   const { fullFilm }: { fullFilm: IMovie } = route.params;
   const [plot, setPlot] = useState<string>(fullFilm.Plot || '');
   useEffect(() => {
-    navigation.setOptions({ title: `Details of: ${fullFilm.Title.substring(0, 20)}${fullFilm.Title.length > 24 && '...'}` });
+    navigation.setOptions({ title: `Details of: ${fullFilm.Title.substring(0, 20)}${fullFilm.Title.length > 24 ? '...' : ''}` });
     const handleGetFullFilm = async () => {
       try {
         const fetchedFilm = await new URLFactory()
